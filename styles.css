@@ -1,0 +1,118 @@
+/* Styles généraux */
+body {
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #333;
+  color: #f4f4f4;
+}
+
+/* Conteneur principal */
+.container {
+  width: 80%;
+  max-width: 600px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #444;
+}
+
+/* En-tête */
+header {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+/* Éléments d'entrée, sélecteurs et boutons */
+input,
+select,
+button {
+  padding: 10px;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1em;
+  background-color: #555;
+  color: #f4f4f4;
+}
+
+/* Groupe d'entrée */
+.input-group {
+  display: flex;
+  justify-content: center;
+}
+
+/* Boutons */
+button {
+  cursor: pointer;
+}
+
+/* Placeholders des champs d'entrée */
+input::placeholder {
+  color: #bbb;
+}
+
+/* Liste des tâches */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+/* Éléments de liste */
+li {
+  padding: 10px;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #555;
+  transition: all 0.3s ease;
+}
+
+/* Éléments de liste complétés */
+li.completed {
+  text-decoration: line-through;
+  color: #777;
+}
+
+/* Pastilles de priorité */
+.priority-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+/* Couleurs des pastilles de priorité */
+.high .priority-dot {
+  background-color: red;
+}
+
+.medium .priority-dot {
+  background-color: orange;
+}
+
+.low .priority-dot {
+  background-color: green;
+}
+
+/* Animation pour les nouveaux éléments de liste */
+li.added {
+  opacity: 0;
+  transform: translateY(-20px);
+  animation: fadeIn 0.3s forwards;
+}
+
+/* Définition de l'animation de fondu en entrée */
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
