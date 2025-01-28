@@ -45,11 +45,17 @@ button {
 .input-group {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
-/* Boutons */
-button {
-  cursor: pointer;
+.input-group input,
+.input-group select {
+  flex: 1 1 auto;
+  margin-bottom: 10px;
+}
+
+.input-group button {
+  flex: 1 1 100%;
 }
 
 /* Placeholders des champs d'entrée */
@@ -114,5 +120,23 @@ li.added {
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+/* Media queries pour le design responsive */
+@media (max-width: 600px) {
+  .container {
+    width: 95%;
+    padding: 10px;
+  }
+
+  .input-group input,
+  .input-group select {
+    flex: 1 1 100%;
+    margin-bottom: 10px;
+  }
+
+  .input-group button {
+    flex: 1 1 100%;
   }
 }
